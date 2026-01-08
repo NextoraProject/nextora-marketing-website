@@ -30,4 +30,4 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push varsubham/cicd-pipeline:latest
+          docker push haritha564/nextora:latest
