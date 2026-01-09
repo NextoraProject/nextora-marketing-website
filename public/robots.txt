@@ -1,0 +1,32 @@
+# NextOra Robots.txt
+# https://nextora.lk
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Google Images
+User-agent: Googlebot-Image
+Allow: /
+
+# Block common non-essential paths (if they exist)
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://nextora.lk/sitemap.xml
+
+# Host
+Host: https://nextora.lk
+

@@ -246,28 +246,36 @@ export const roadmap: RoadmapItem[] = [
 
 export const faqs: FAQ[] = [
   {
-    question: 'Who can use NextOra?',
-    answer: 'NextOra is available to all registered students, lecturers, and staff members of Informatics Institute of Technology (IIT), Sri Lanka. You need your official IIT credentials to sign in.',
+    question: 'What is NextOra and how does it help IIT Sri Lanka students?',
+    answer: 'NextOra is the unified campus platform designed specifically for IIT Sri Lanka students. It combines timetables, kuppi sessions (peer tutoring), AR campus navigation, event management, exam results, lost & found services, and more into one powerful app. NextOra replaces multiple scattered platforms with a single, modern solution for all your campus needs.',
   },
   {
-    question: 'Is NextOra free to use?',
-    answer: 'Yes! NextOra is completely free for all IIT students and staff. We believe in making campus life better for everyone without any barriers.',
+    question: 'Who can use NextOra campus platform?',
+    answer: 'NextOra is available to all registered students, lecturers, and staff members of Informatics Institute of Technology (IIT), Sri Lanka. You need your official IIT credentials to sign in. The platform is designed by IIT students who understand the unique challenges of campus life.',
   },
   {
-    question: 'How secure is my data?',
-    answer: 'We take security seriously. NextOra uses OAuth2 authentication, JWT tokens, 2FA options, and end-to-end encryption for sensitive data. Your information is stored securely and never shared with third parties.',
+    question: 'Is NextOra free for IIT students?',
+    answer: 'Yes! NextOra is completely free for all IIT Sri Lanka students and staff members. We believe in making campus life better for everyone without any barriers. All features including timetables, navigation, events, and kuppi sessions are available at no cost.',
   },
   {
-    question: 'Can I use it offline?',
-    answer: 'Yes! Core features like campus maps, downloaded timetables, and saved resources work offline. The app syncs automatically when you\'re back online.',
+    question: 'How secure is NextOra? Is my student data protected?',
+    answer: 'NextOra takes security seriously. We use enterprise-grade security including OAuth2 authentication, JWT tokens, 2FA (two-factor authentication) options, and end-to-end encryption for sensitive data. Your personal information and academic data are stored securely on protected servers and are never shared with third parties.',
   },
   {
-    question: 'How do I report a bug or suggest a feature?',
-    answer: 'We love feedback! Use the in-app feedback feature or email us at support@nextora.lk. Our team reviews all suggestions and bug reports regularly.',
+    question: 'Can I use NextOra offline without internet?',
+    answer: 'Yes! NextOra works offline too. Core features like campus maps, downloaded timetables, saved lecture notes, and academic resources work without internet connection. The app automatically syncs your data when you reconnect to the internet.',
   },
   {
-    question: 'Is there a desktop version?',
-    answer: 'NextOra is mobile-first with a responsive web application that works on all devices. A dedicated mobile app for iOS and Android is on our roadmap.',
+    question: 'What features does NextOra offer for IIT students?',
+    answer: 'NextOra offers comprehensive features including: Real-time timetables and exam schedules, Kuppi sessions for peer tutoring, AR-powered campus navigation, Event discovery and ticket booking, Lost & found item matching, Student election voting, Lecturer consultation booking, SRU announcements, and much more. All designed specifically for IIT Sri Lanka campus life.',
+  },
+  {
+    question: 'How do I report bugs or suggest new features for NextOra?',
+    answer: 'We love feedback from our users! You can use the in-app feedback feature to report bugs or suggest new features. Alternatively, email us at nextora.platform@gmail.com. Our development team reviews all suggestions and bug reports regularly to continuously improve the platform.',
+  },
+  {
+    question: 'Is NextOra available on mobile (iOS and Android)?',
+    answer: 'NextOra is currently available as a responsive web application that works beautifully on all devices including smartphones, tablets, and desktops. Dedicated native mobile apps for iOS and Android are on our development roadmap and coming soon!',
   },
 ];
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Box, Button, Container, Grid, Stack, Typography, useTheme } from '@mui/material';
+import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material';
 import { PlayArrow, Rocket } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import GradientText from '../ui/GradientText';
@@ -134,8 +134,10 @@ export default function Hero() {
                 </Typography>
               </Box>
 
+              {/* SEO-optimized H1 - Main keyword: NextOra Campus Platform */}
               <Typography
                 variant="h1"
+                component="h1"
                 sx={{
                   fontSize: { xs: '2.75rem', sm: '3.5rem', md: '4rem' },
                   mb: 3,
@@ -152,8 +154,10 @@ export default function Hero() {
                 </GradientText>
               </Typography>
 
+              {/* SEO-optimized subheading with keywords */}
               <Typography
                 variant="h6"
+                component="p"
                 sx={{
                   color: 'text.secondary',
                   fontWeight: 400,
@@ -162,7 +166,7 @@ export default function Hero() {
                   lineHeight: 1.7,
                 }}
               >
-                  Replacing IIT intranet with a modern platform for academics, events, campus services, and student life — everything you need at IIT in one place.
+                  NextOra is the unified campus platform for IIT Sri Lanka students. Access timetables, kuppi sessions, AR navigation, events, and more — everything you need in one place.
               </Typography>
 
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mb: 6 }}>
@@ -173,6 +177,7 @@ export default function Hero() {
                   startIcon={<Rocket />}
                   onClick={() => scrollToSection('#cta')}
                   sx={{ px: 4, py: 1.75 }}
+                  aria-label="Get early access to NextOra campus platform"
                 >
                   Get Early Access
                 </Button>

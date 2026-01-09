@@ -21,9 +21,10 @@ export default function FAQ() {
 
   return (
     <SectionWrapper id="faq" background="default">
-      <Box sx={{ textAlign: 'center', mb: 8 }}>
+      <Box component="header" sx={{ textAlign: 'center', mb: 8 }}>
         <Typography
           variant="overline"
+          component="span"
           sx={{
             color: colors.indigo.main,
             fontWeight: 600,
@@ -34,7 +35,7 @@ export default function FAQ() {
         >
           FAQ
         </Typography>
-        <Typography variant="h2" sx={{ mb: 2 }}>
+        <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
           Frequently Asked{' '}
           <GradientText variant="h2" component="span">
             Questions
@@ -42,13 +43,14 @@ export default function FAQ() {
         </Typography>
         <Typography
           variant="h6"
+          component="p"
           sx={{ color: 'text.secondary', fontWeight: 400, maxWidth: 600, mx: 'auto' }}
         >
-          Got questions? We&apos;ve got answers. Here are the most common queries we receive.
+          Got questions about NextOra campus platform? Here are the most common queries about our IIT Sri Lanka student app.
         </Typography>
       </Box>
 
-      <Box sx={{ maxWidth: 800, mx: 'auto' }}>
+      <Box component="section" aria-label="Frequently Asked Questions about NextOra" sx={{ maxWidth: 800, mx: 'auto' }}>
         {faqs.map((faq, index) => (
           <MotionBox
             key={index}

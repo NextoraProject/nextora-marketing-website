@@ -240,15 +240,16 @@ export default function Footer() {
           alignItems="center"
           spacing={2}
         >
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            © {new Date().getFullYear()} NextOra. All rights reserved.
+          <Typography variant="body2" component="p" sx={{ color: 'text.secondary' }}>
+            © {new Date().getFullYear()} NextOra - The #1 Campus Platform for IIT Sri Lanka Students. All rights reserved.
           </Typography>
           <Stack direction="row" spacing={1} alignItems="center">
-            <Email sx={{ fontSize: 18, color: 'text.secondary' }} />
+            <Email sx={{ fontSize: 18, color: 'text.secondary' }} aria-hidden="true" />
             <Typography
               component="a"
               href="mailto:nextora.platform@gmail.com"
               variant="body2"
+              aria-label="Email NextOra support"
               sx={{
                 color: 'text.secondary',
                 textDecoration: 'none',
@@ -265,6 +266,7 @@ export default function Footer() {
 
       {/* Background decorations */}
       <Box
+        aria-hidden="true"
         sx={{
           position: 'absolute',
           bottom: '20%',
@@ -277,6 +279,7 @@ export default function Footer() {
         }}
       />
       <Box
+        aria-hidden="true"
         sx={{
           position: 'absolute',
           bottom: '10%',

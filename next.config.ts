@@ -24,12 +24,16 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['@mui/material', '@mui/icons-material', 'framer-motion'],
   },
 
-  // Headers for caching and security
+  // SEO: Trailing slash configuration
+  trailingSlash: false,
+
+  // Headers for caching, security, and SEO
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
+          // Security Headers
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
@@ -41,6 +45,61 @@ const nextConfig: NextConfig = {
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(self)',
+          },
+          // SEO Headers
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+          },
+        ],
+      },
+      {
+        // Sitemap caching
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=43200',
+          },
+        ],
+      },
+      {
+        // Robots.txt caching
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=86400',
+          },
+        ],
+      },
+      {
+        // Manifest caching
+        source: '/manifest.json',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/manifest+json',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=604800, s-maxage=604800',
           },
         ],
       },
@@ -63,6 +122,40 @@ const nextConfig: NextConfig = {
             value: 'public, max-age=31536000, immutable',
           },
         ],
+      },
+    ];
+  },
+
+  // SEO: Redirects for common URL variations
+  async redirects() {
+    return [
+      // Redirect www to non-www (choose one canonical version)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.nextora.lk',
+          },
+        ],
+        destination: 'https://nextora.lk/:path*',
+        permanent: true,
+      },
+      // Redirect common misspellings
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/index',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
       },
     ];
   },

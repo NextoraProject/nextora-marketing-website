@@ -15,9 +15,11 @@ export default function Features() {
 
   return (
     <SectionWrapper id="features" background="default" paddingY={16}>
-      <Box sx={{ textAlign: 'center', mb: 8 }}>
+      {/* Hidden SEO text for search engines */}
+      <Box component="header" sx={{ textAlign: 'center', mb: 8 }}>
         <Typography
           variant="overline"
+          component="span"
           sx={{
             color: colors.primary.main,
             fontWeight: 600,
@@ -28,7 +30,7 @@ export default function Features() {
         >
           FEATURES
         </Typography>
-        <Typography variant="h2" sx={{ mb: 2 }}>
+        <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
           Everything You Need,{' '}
           <GradientText variant="h2" component="span">
             One Place.
@@ -36,13 +38,14 @@ export default function Features() {
         </Typography>
         <Typography
           variant="h6"
+          component="p"
           sx={{ color: 'text.secondary', fontWeight: 400, maxWidth: 600, mx: 'auto' }}
         >
-          Powerful features designed specifically for IIT students, by students who understand your needs.
+          NextOra provides powerful campus features designed specifically for IIT Sri Lanka students — timetables, kuppi sessions, AR navigation, events, and more.
         </Typography>
       </Box>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={3} component="section" aria-label="NextOra Features">
         {features.map((feature, index) => (
           <Grid size={{ xs: 12, sm: 6, lg: 4 }} key={feature.title}>
             <MotionBox
